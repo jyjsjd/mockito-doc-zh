@@ -533,7 +533,7 @@ assertEquals("John", argument.getValue().getName());
 
 [ArgumentMatcher]: http://site.mockito.org/mockito/docs/current/org/mockito/ArgumentMatcher.html
 
-16. 真实的局部mocks (1.8版本之后)
+### 16. 真实的局部mocks (1.8版本之后)
 
 在内部通过邮件进行了无数争辩和讨论后，最终 Mockito 决定支持部分测试，早前我们不支持是因为我们认为部分测试会让代码变得糟糕。然而，我们发现了部分测试真正合理的用法。[详情点这](http://monkeyisland.pl/2009/01/13/subclass-and-override-vs-partial-mocking-vs-refactoring/)
 
@@ -554,7 +554,7 @@ assertEquals("John", argument.getValue().getName());
 
 然而，在一些罕见的情况下部分测试才会是易用的：处理不能轻易修改的代码（第三方接口，临时重构的遗留代码等等）。然而，为了新的，测试驱动和架构优秀的代码，我是不会使用部分测试的。
 
-17. 重置mocks对象 (1.8版本之后)
+### 17. 重置mocks对象 (1.8版本之后)
 
 聪明的 Mockito 使用者很少会用到这个特性，因为他们知道这是出现糟糕测试单元的信号。通常情况下你不会需要重设你的测试单元，只需要为每一个测试方法重新创建一个测试单元就可以了。
 
@@ -574,7 +574,7 @@ assertEquals("John", argument.getValue().getName());
    //at this point the mock forgot any interactions & stubbing
 ```
 
-18. 故障排查与验证框架的使用 (1.8版本之后)
+### 18. 故障排查与验证框架的使用 (1.8版本之后)
 
 首先，如果出现了任何问题，我建议你先看 [Mockito FAQ](http://code.google.com/p/mockito/wiki/FAQ)。
 
@@ -582,7 +582,7 @@ assertEquals("John", argument.getValue().getName());
 
 然后你应该知道 Mockito 会验证你是否始终以正确的方式使用它，对此有疑惑的话不妨看看 [validateMockitoUsage()](http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html#validateMockitoUsage()) 的文档说明。
 
-19.行为驱动开发的别名 (1.8版本之后)
+### 19.行为驱动开发的别名 (1.8版本之后)
 
 行为驱动开发实现测试单元的模式将 //given //when //then comments 视作测试方法的基础，这也是我们实现单元测试时被建议做的！
 
@@ -608,7 +608,7 @@ assertEquals("John", argument.getValue().getName());
  }
 ```
 
-20. 序列化mock对象
+### 20. 序列化mock对象
 
 模拟对象可以被序列化。有了这个特性你就可以在依赖被序列化的情况下使用模拟对象了。
 
@@ -637,7 +637,7 @@ The mock can be serialized assuming all the normal [serialization requirements](
                  .serializable());
 ```
 
-21. 新的注解 : @Captor,@Spy,@ InjectMocks (1.8.3版本之后)
+### 21. 新的注解 : @Captor,@Spy,@ InjectMocks (1.8.3版本之后)
 
 V1.8.3 带来的新注解在某些场景下可能会很实用
 
@@ -649,7 +649,7 @@ V1.8.3 带来的新注解在某些场景下可能会很实用
 
 所有新的注解仅仅在 [MockitoAnnotations.initMocks(Object)](http://site.mockito.org/mockito/docs/current/org/mockito/MockitoAnnotations.html#initMocks(java.lang.Object)) 方法中被处理，就像你在 built-in runner 中使用的 @[Mock](http://site.mockito.org/mockito/docs/current/org/mockito/Mock.html) 注解：[MockitoJUnitRunner](http://site.mockito.org/mockito/docs/current/org/mockito/runners/MockitoJUnitRunner.html) 或 规范: [MockitoRule](http://site.mockito.org/mockito/docs/current/org/mockito/junit/MockitoRule.html).
 
-22. 验证超时 (1.8.5版本之后)
+### 22. 验证超时 (1.8.5版本之后)
 
 允许带有暂停的验证。这使得一个验证去等待一段特定的时间，以获得想要的交互而不是如果还没有发生事件就带来的立即失败。在并发条件下的测试这会很有用。
 
@@ -676,7 +676,7 @@ V1.8.3 带来的新注解在某些场景下可能会很实用
    verify(mock, new Timeout(100, yourOwnVerificationMode)).someMethod();
 ```
 
-23. 自动初始化被@Spies, @InjectMocks注解的字段以及构造函数注入 (1.9.0版本之后)
+### 23. 自动初始化被@Spies, @InjectMocks注解的字段以及构造函数注入 (1.9.0版本之后)
 
 Mockito 现在会通过注入构造方法、setter 或域注入尽可能初始化带有 @[Spy](http://site.mockito.org/mockito/docs/current/org/mockito/Spy.html) 和 @[InjectMocks](http://site.mockito.org/mockito/docs/current/org/mockito/InjectMocks.html) 注解的域或方法。
 
@@ -694,7 +694,7 @@ Mockito 现在会通过注入构造方法、setter 或域注入尽可能初始�
  @InjectMocks LocalPub;
 ```
 
-24. 单行测试桩 (1.9.0版本之后)
+### 24. 单行测试桩 (1.9.0版本之后)
 
 Mockito 现在允许你在使用测试桩时创建模拟对象。基本上，它允许在一行代码中创建一个测试桩，这对保持代码的整洁很有用。举例来说，有些乏味的测试桩会被创建，并在测试初始化域时被打入，例如：
 
@@ -705,7 +705,7 @@ Mockito 现在允许你在使用测试桩时创建模拟对象。基本上，它
    @Test public void should... {}
  ```
 
-25. 验证被忽略的测试桩 (1.9.0版本之后)
+### 25. 验证被忽略的测试桩 (1.9.0版本之后)
 
 Mockito 现在允许为了验证无视测试桩。在与 verifyNoMoreInteractions() 方法或验证 inOrder() 方法耦合时，有些时候会很有用。帮助避免繁琐的打入测试桩调用验证 - 显然我们不会对验证测试桩感兴趣。
 
@@ -729,7 +729,7 @@ Mockito 现在允许为了验证无视测试桩。在与 verifyNoMoreInteraction
 
 更好的例子和更多的细节都可以在 Java 文档的 [ignoreStubs(Object...)](http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html#ignoreStubs(java.lang.Object...)) 部分看到。
 
-26. mock详情 (1.9.5版本之后)
+### 26. mock详情 (1.9.5版本之后)
 
 为了区别一个对象是模拟对象还是侦查对象：
 
@@ -740,7 +740,7 @@ Mockito 现在允许为了验证无视测试桩。在与 verifyNoMoreInteraction
 
 [MockingDetails.isMock()](http://site.mockito.org/mockito/docs/current/org/mockito/MockingDetails.html#isMock()) 和 [MockingDetails.isSpy()](http://site.mockito.org/mockito/docs/current/org/mockito/MockingDetails.html#isSpy()) 方法都会返回一个布尔值。因为一个侦查对象只是模拟对象的一种变种，所以 isMock() 方法在对象是侦查对象是会返回 true。在之后的 Mockito 版本中 MockingDetails 会变得更健壮，并提供其他与模拟对象相关的有用信息，例如：调用，测试桩信息，等等……
 
-###27. [委托调用真实实例][delegating_call_to_real_instance] (Since 1.9.5)
+### 27. [委托调用真实实例][delegating_call_to_real_instance] (Since 1.9.5)
 
 当**使用常规的 spy API 去 mock 或者 spy 一个对象很困难**时可以用 delegate 来 spy 或者 mock 对象的某一部分。
 从 Mockito 的 1.10.11 版本开始， delegate 有可能和 mock 的类型相同也可能不同。如果不是同一类型，
@@ -768,7 +768,7 @@ Mock 的 delegates 相对于标准的 spy 来说功能弱了很多，不过在�
 
 ---
 
-###28. [MockMaker API ][mock_maker_plugin](Since 1.9.5)
+### 28. [MockMaker API ][mock_maker_plugin](Since 1.9.5)
 
 为了满足用户的需求和 Android 平台使用。Mockito 现在提供一个扩展点，允许替换代理生成引擎。默认情况下，Mockito 使用 cglib 创建动态代理。
 
@@ -783,7 +783,7 @@ Mock 的 delegates 相对于标准的 spy 来说功能弱了很多，不过在�
 
 ---
 
-###29. [(new) BDD 风格的验证][BDD_behavior_verification] (Since 1.10.0)
+### 29. [(new) BDD 风格的验证][BDD_behavior_verification] (Since 1.10.0)
 
 开启 Behavior Driven Development (BDD) 风格的验证可以通过 BBD 的关键词 **then** 开始验证。
 
@@ -807,7 +807,7 @@ Mock 的 delegates 相对于标准的 spy 来说功能弱了很多，不过在�
  ---
 
 
-###30. [(new) Spying 或 mocking 抽象类][spying_abstract_classes] (Since 1.10.12)
+### 30. [(new) Spying 或 mocking 抽象类][spying_abstract_classes] (Since 1.10.12)
 
 现在可以方便的 spy 一个抽象类。注意，过度使用 spy 或许意味着代码的设计上有问题。(see [spy(Object)][spy]).
 
@@ -838,7 +838,7 @@ Mock 的 delegates 相对于标准的 spy 来说功能弱了很多，不过在�
  ---
 
 
-###31. [(new) Mockito mocks 可以通过 classloaders 序列化/反序列化][serilization_across_classloader] (Since 1.10.0)
+### 31. [(new) Mockito mocks 可以通过 classloaders 序列化/反序列化][serilization_across_classloader] (Since 1.10.0)
 
  Mockito 通过 classloader 引入序列化。和其他形式的序列化一样，所有 mock 层的对象都要被序列化，
  包括 answers。因为序列化模式需要大量的工作，所以这是一个可选择设置。
@@ -859,7 +859,7 @@ Mock 的 delegates 相对于标准的 spy 来说功能弱了很多，不过在�
 
  ---
 
-###32. [(new) Deep stubs 更好的泛型支持][better_generic_support_with_deep_stubs] (Since 1.10.0)
+### 32. [(new) Deep stubs 更好的泛型支持][better_generic_support_with_deep_stubs] (Since 1.10.0)
 
  Deep stubbing 现在可以更好的查找类的泛型信息。这就意味着像这样的类
  不必去 mock 它的行为就可以使用。
@@ -882,7 +882,7 @@ class Lines extends List<Line> {
 
  ---
 
-###33.  [(new) Mockito JUnit rule][mockito_junit_rule] (Since 1.10.17)
+### 33.  [(new) Mockito JUnit rule][mockito_junit_rule] (Since 1.10.17)
 
 
 Mockito 现在提供一个 JUnit rule。目前为止，有两种方法可以初始化 fields ，使用 Mockito 提供的注解比如
@@ -914,7 +914,7 @@ Mockito 现在提供一个 JUnit rule。目前为止，有两种方法可以初�
 
  ---
 
-###34. [(new) 开启和关闭 plugins][PluginSwitch] (Since 1.10.15)
+### 34. [(new) 开启和关闭 plugins][PluginSwitch] (Since 1.10.15)
 
 这是一个测试特性，可以控制一个 mockito-plugin 开启或者关闭。详情请查看 [PluginSwitch][PluginSwitch]
 
@@ -923,7 +923,7 @@ Mockito 现在提供一个 JUnit rule。目前为止，有两种方法可以初�
 
 ---
 
-###35. 自定义验证失败信息 (Since 2.0.0)
+### 35. 自定义验证失败信息 (Since 2.0.0)
 
 允许声明一个在验证失败时输出的自定义消息
 示例:
@@ -936,7 +936,7 @@ Mockito 现在提供一个 JUnit rule。目前为止，有两种方法可以初�
  verify(mock, times(2).description("someMethod should be called twice")).someMethod();
 ```
 
-###字段摘要
+### 字段摘要
 
 <table>
 <tbody>
@@ -952,7 +952,7 @@ Mockito 现在提供一个 JUnit rule。目前为止，有两种方法可以初�
 </tbody>
 </table>
 
-###字段详情
+### 字段详情
 <table>
 <tbody>
 <tr>
@@ -981,7 +981,7 @@ partial mock是如果适应这种模式的呢？好吧！它不仅仅是，parti
 </tbody>
 </table>
 
-###方法摘要
+### 方法摘要
 <table>
 	<tbody>
 	<tr>
@@ -1016,8 +1016,8 @@ partial mock是如果适应这种模式的呢？好吧！它不仅仅是，parti
 	</tbody>
 </table>
 
-#方法详情
-##after
+# 方法详情
+## after
 ```java
 	public static VerificationAfterDelay after(long millis)
 ```
@@ -1059,7 +1059,7 @@ after()等待整个周期的特点不同于timeout()，而timeout()一旦验证�
 * verification mode
 
 
-##atLeast
+## atLeast
 ```java
 	public static VerificationMode atLeast(int minNumberOfInvocations)
 ```
@@ -1098,7 +1098,7 @@ atLeast(1)的别名.
 
 * verification mode
 
-##atMost
+## atMost
 ```java
 	public static VerificationMode atMost(int maxNumberOfInvocations)
 ```
@@ -1119,7 +1119,7 @@ atLeast(1)的别名.
 
 * verification mode
 
-##calls
+## calls
 ```java
 	public static VerificationMode calls(int wantedNumberOfInvocations)
 ```
@@ -1143,7 +1143,7 @@ atLeast(1)的别名.
 * verification mode<br><br>
 
 #继承org.mockito.Matchers的方法
-##any
+## any
 ```java
 	public static <T> T any()<br><br>
 ```
@@ -1161,7 +1161,7 @@ anyObject()的别名
 * null
 	
 <!--第二行-->
-##any
+## any
 ```java
 	public static <T> T any(Class<T> clazz)
 ```
@@ -1178,7 +1178,7 @@ anyObject()的别名
 
 * null
 <!--第三行-->
-##anyBoolean
+## anyBoolean
 ```java
 	public static boolean anyBoolean()
 ```
@@ -1192,7 +1192,7 @@ anyObject()的别名
 * false
 
 <!--第四行-->
-##anyByte
+## anyByte
 ```java
 	public static byte anyByte()
 ```
@@ -1206,7 +1206,7 @@ anyObject()的别名
 * 0
 
 <!--第五行-->
-##anyChar
+## anyChar
 ```java
 	public static char anyChar()
 ```
@@ -1234,7 +1234,7 @@ public static Collection anyCollection()
 * 空Collection.
 
 <!--第七行-->
-##anyCollectionOf
+## anyCollectionOf
 ```java
 public static < T > Collection < T > anyCollectionOf(Class<T> clazz)
 ```
@@ -1256,7 +1256,7 @@ public static < T > Collection < T > anyCollectionOf(Class<T> clazz)
 * 空Collection.<br><br>
 
 <!--第八行-->
-##anyDouble
+## anyDouble
 ```java
 	public static double anyDouble()
 ```
@@ -1270,7 +1270,7 @@ public static < T > Collection < T > anyCollectionOf(Class<T> clazz)
 * 0.
 
 <!--第九行-->
-##anyFloat
+## anyFloat
 ```java
 	public static float anyFloat()
 ```
@@ -1284,7 +1284,7 @@ public static < T > Collection < T > anyCollectionOf(Class<T> clazz)
 * 0.
 
 <!--第十行-->
-##anyInt
+## anyInt
 ```java
 	public static int anyInt()
 ```
@@ -1298,7 +1298,7 @@ public static < T > Collection < T > anyCollectionOf(Class<T> clazz)
 * 0.
 
 <!--第十一行-->
-##anyList
+## anyList
 ```java
 public static List anyList()
 ```
@@ -1312,7 +1312,7 @@ public static List anyList()
 * 空List.
 
 <!--第十二行-->
-##anyListOf
+## anyListOf
 ```java
 public static < T >  List < T > anyListOf(Class< T > clazz)
 ```
@@ -1334,7 +1334,7 @@ public static < T >  List < T > anyListOf(Class< T > clazz)
 * 空List.
 
 <!--第十三行-->
-##anyLong
+## anyLong
 ```java
 	public static long anyLong()
 ```
@@ -1348,7 +1348,7 @@ public static < T >  List < T > anyListOf(Class< T > clazz)
 * 0.
 
 <!--第十四行-->
-##anyMap
+## anyMap
 ```java
 public static Map anyMap()
 ```
@@ -1362,7 +1362,7 @@ public static Map anyMap()
 * 空Map.
 
 <!--第十五行-->
-##anyMapOf
+## anyMapOf
 ```java
 public static < K,V> Map < K,V> anyMapOf(Class< K> keyClazz, Class< V> valueClazz)
 ```
@@ -1385,7 +1385,7 @@ public static < K,V> Map < K,V> anyMapOf(Class< K> keyClazz, Class< V> valueClaz
 * 空Map.
 
 <!--第十六行-->
-##anyObject
+## anyObject
 ```java
 public static < T> T anyObject()
 ```
@@ -1401,7 +1401,7 @@ public static < T> T anyObject()
 * empty null.
 
 <!--第十七行-->
-##anySet**
+## anySet**
 ```java
 public static <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true">Set</a> anySet()
 ```
@@ -1415,7 +1415,7 @@ public static <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.ht
 * 空Set.
 
 <!--第十八行-->
-##anySetOf
+## anySetOf
 ```java
 public static < T> Set < T> anySetOf(Class< T> clazz)
 ```
@@ -1437,7 +1437,7 @@ public static < T> Set < T> anySetOf(Class< T> clazz)
 * 空Set.
 
 <!--第十九行-->
-##anyShort
+## anyShort
 ```java
 	public static short anyShort()
 ```
@@ -1451,7 +1451,7 @@ public static < T> Set < T> anySetOf(Class< T> clazz)
 * 0.
 
 <!--第二十行-->
-##anyString
+## anyString
 ```java
 	public static String anyString()
 ```
