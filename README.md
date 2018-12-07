@@ -1080,7 +1080,7 @@ after()等待整个周期的特点不同于timeout()，而timeout()一旦验证�
 
 * verification mode<br><br>
 
-##atLeastOnce
+## atLeastOnce
 ```java
 	public static VerificationMode atLeastOnce()
 ```
@@ -1220,7 +1220,7 @@ anyObject()的别名
 * 0
 
 <!--第六行-->
-##anyCollection
+## anyCollection
 ```java
 public static Collection anyCollection()
 ```
@@ -1465,7 +1465,7 @@ public static < T> Set < T> anySetOf(Class< T> clazz)
 * 空String ("").
 
 <!--第二十一行-->
-##anyVararg
+## anyVararg
 ```java
 	public static < T> T anyVararg()
 ```
@@ -1498,7 +1498,7 @@ public static < T> Set < T> anySetOf(Class< T> clazz)
 * null.
 
 <!--第二十二行-->
-##argThat
+## argThat
 ```java
 public static < T> T argThat(ArgumentMatcher < T> matcher)
 ```
@@ -1520,7 +1520,7 @@ public static < T> T argThat(ArgumentMatcher < T> matcher)
 * null.
 
 <!--第二十三行-->
-##booleanThat
+## booleanThat
 ```java
 public static boolean booleanThat(ArgumentMatcher < Boolean> matcher)
 ```
@@ -1537,7 +1537,7 @@ public static boolean booleanThat(ArgumentMatcher < Boolean> matcher)
 * false.
 
 <!--第二十四行-->
-##byteThat
+## byteThat
 ```java
 public static byte byteThat(ArgumentMatcher < Byte> matcher)
 ```
@@ -1555,7 +1555,7 @@ public static byte byteThat(ArgumentMatcher < Byte> matcher)
 * 0.
 
 <!--第二十五行-->
-##charThat
+## charThat
 ```java
 public static char charThat(ArgumentMatcher < Character> matcher)
 ```
@@ -1591,7 +1591,7 @@ String参数包含给定的substring字符串.
 
 * 空String ("").
 
-##description函数
+## description函数
 
 `public static VerificationMod description(String description)`
 
@@ -1617,7 +1617,7 @@ verify(mock, description("This will print on failure")).someMethod("some arg");
 
 ---
 
-##doAnswer函数
+## doAnswer函数
 
 `public static Stubber doAnswer(Answer answer)`
 
@@ -1648,7 +1648,7 @@ doAnswer(new Answer() {
 
 ---
 
-##doCallRealMethod函数
+## doCallRealMethod函数
 
 `public static Stubber doCallRealMethod()`
 
@@ -1684,7 +1684,7 @@ Foo mock = mock(Foo.class);
 
 ---
 
-##doNothing函数
+## doNothing函数
 
 `public static Stubber doNothing()`
 
@@ -1735,7 +1735,7 @@ stubber - 测试方法的测试桩
 
 
 
-##doReturn函数
+## doReturn函数
 
 `public static Stubber doReturn(Object toBeReturned)`
 
@@ -1792,7 +1792,7 @@ stubber - 测试方法的测试桩
 
 ---
 
-##doThrow函数
+## doThrow函数
 
 `public static Stubber doThrow(Class<? extends Throwable> toBeThrown)`
 
@@ -1820,7 +1820,7 @@ doThrow(RuntimeException.class).when(mock).someVoidMethod();
 
 ---
 
-##doThrow函数
+## doThrow函数
 
 `public static Stubber doThrow(Throwable toBeThrown)`
 
@@ -1848,7 +1848,7 @@ doThrow(RuntimeException.class).when(mock).someVoidMethod();
 
 ---
 
-##ignoreStubs函数
+## ignoreStubs函数
 
 `public static Object[] ignoreStubs(Object... mocks)`
  
@@ -1936,7 +1936,7 @@ List list = mock(List.class);
 ---
 
 
-##inOrder函数
+## inOrder函数
 
 `public static InOrder inOrder(Object... mocks)`
 
@@ -1968,7 +1968,7 @@ in order中被用于验证的InOrder对象
 
 ---
 
-##mock函数
+## mock函数
 
 `public static <T> T mock(Class <T> classToMock)`
 
@@ -1985,7 +1985,7 @@ mock对象
 
 ---
 
-##mock函数
+## mock函数
 
 `public static <T> T mock(Class <T> classToMock, Answer defaultAnswer)`
 
@@ -2015,7 +2015,7 @@ mock对象
 
 ---
 
-##mock函数
+## mock函数
 
 `public static <T> T mock(Class <T> classToMock, MockSettings mockSettings)`
  
@@ -2049,7 +2049,7 @@ Listener mock = mock(Listener.class, withSettings()
 
 ---
 
-##mock
+## mock
 
 @Deprecated
 
@@ -2086,7 +2086,7 @@ Foo mockTwo = mock(Foo.class, new YourOwnReturnValues());
 
 * mock对象
 
-##mock
+## mock
 
 `public static <T> T mock(Class <T> classToMock, String name)`
 

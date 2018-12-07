@@ -79,7 +79,7 @@ partial mock是如果适应这种模式的呢？好吧！它不仅仅是，parti
 </table>
 
 #方法详情
-##after
+## after
 ```java
 	public static VerificationAfterDelay after(long millis)
 ```
@@ -121,7 +121,7 @@ after()等待整个周期的特点不同于timeout()，而timeout()一旦验证�
 * verification mode
 
 
-##atLeast
+## atLeast
 ```java
 	public static VerificationMode atLeast(int minNumberOfInvocations)
 ```
@@ -142,7 +142,7 @@ after()等待整个周期的特点不同于timeout()，而timeout()一旦验证�
 
 * verification mode<br><br>
 
-##atLeastOnce
+## atLeastOnce
 ```java
 	public static VerificationMode atLeastOnce()
 ```
@@ -160,7 +160,7 @@ atLeast(1)的别名.
 
 * verification mode
 
-##atMost
+## atMost
 ```java
 	public static VerificationMode atMost(int maxNumberOfInvocations)
 ```
@@ -181,7 +181,7 @@ atLeast(1)的别名.
 
 * verification mode
 
-##calls
+## calls
 ```java
 	public static VerificationMode calls(int wantedNumberOfInvocations)
 ```
@@ -205,7 +205,7 @@ atLeast(1)的别名.
 * verification mode<br><br>
 
 #继承org.mockito.Matchers的方法
-##any
+## any
 ```java
 	public static <T> T any()<br><br>
 ```
@@ -223,7 +223,7 @@ anyObject()的别名
 * null
 	
 <!--第二行-->
-##any
+## any
 ```java
 	public static <T> T any(Class<T> clazz)
 ```
@@ -240,7 +240,7 @@ anyObject()的别名
 
 * null
 <!--第三行-->
-##anyBoolean
+## anyBoolean
 ```java
 	public static boolean anyBoolean()
 ```
@@ -254,7 +254,7 @@ anyObject()的别名
 * false
 
 <!--第四行-->
-##anyByte
+## anyByte
 ```java
 	public static byte anyByte()
 ```
@@ -268,7 +268,7 @@ anyObject()的别名
 * 0
 
 <!--第五行-->
-##anyChar
+## anyChar
 ```java
 	public static char anyChar()
 ```
@@ -282,7 +282,7 @@ anyObject()的别名
 * 0
 
 <!--第六行-->
-##anyCollection
+## anyCollection
 ```java
 public static Collection anyCollection()
 ```
@@ -296,7 +296,7 @@ public static Collection anyCollection()
 * 空Collection.
 
 <!--第七行-->
-##anyCollectionOf
+## anyCollectionOf
 ```java
 public static < T > Collection < T > anyCollectionOf(Class<T> clazz)
 ```
@@ -318,7 +318,7 @@ public static < T > Collection < T > anyCollectionOf(Class<T> clazz)
 * 空Collection.<br><br>
 
 <!--第八行-->
-##anyDouble
+## anyDouble
 ```java
 	public static double anyDouble()
 ```
@@ -332,7 +332,7 @@ public static < T > Collection < T > anyCollectionOf(Class<T> clazz)
 * 0.
 
 <!--第九行-->
-##anyFloat
+## anyFloat
 ```java
 	public static float anyFloat()
 ```
@@ -346,7 +346,7 @@ public static < T > Collection < T > anyCollectionOf(Class<T> clazz)
 * 0.
 
 <!--第十行-->
-##anyInt
+## anyInt
 ```java
 	public static int anyInt()
 ```
@@ -360,7 +360,7 @@ public static < T > Collection < T > anyCollectionOf(Class<T> clazz)
 * 0.
 
 <!--第十一行-->
-##anyList
+## anyList
 ```java
 public static List anyList()
 ```
@@ -374,7 +374,7 @@ public static List anyList()
 * 空List.
 
 <!--第十二行-->
-##anyListOf
+## anyListOf
 ```java
 public static < T >  List < T > anyListOf(Class< T > clazz)
 ```
@@ -396,7 +396,7 @@ public static < T >  List < T > anyListOf(Class< T > clazz)
 * 空List.
 
 <!--第十三行-->
-##anyLong
+## anyLong
 ```java
 	public static long anyLong()
 ```
@@ -410,7 +410,7 @@ public static < T >  List < T > anyListOf(Class< T > clazz)
 * 0.
 
 <!--第十四行-->
-##anyMap
+## anyMap
 ```java
 public static Map anyMap()
 ```
@@ -424,7 +424,7 @@ public static Map anyMap()
 * 空Map.
 
 <!--第十五行-->
-##anyMapOf
+## anyMapOf
 ```java
 public static < K,V> Map < K,V> anyMapOf(Class< K> keyClazz, Class< V> valueClazz)
 ```
@@ -447,7 +447,7 @@ public static < K,V> Map < K,V> anyMapOf(Class< K> keyClazz, Class< V> valueClaz
 * 空Map.
 
 <!--第十六行-->
-##anyObject
+## anyObject
 ```java
 public static < T> T anyObject()
 ```
@@ -463,7 +463,7 @@ public static < T> T anyObject()
 * empty null.
 
 <!--第十七行-->
-##anySet**
+## anySet**
 ```java
 public static <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true">Set</a> anySet()
 ```
@@ -477,7 +477,7 @@ public static <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.ht
 * 空Set.
 
 <!--第十八行-->
-##anySetOf
+## anySetOf
 ```java
 public static < T> Set < T> anySetOf(Class< T> clazz)
 ```
@@ -499,7 +499,7 @@ public static < T> Set < T> anySetOf(Class< T> clazz)
 * 空Set.
 
 <!--第十九行-->
-##anyShort
+## anyShort
 ```java
 	public static short anyShort()
 ```
@@ -513,7 +513,7 @@ public static < T> Set < T> anySetOf(Class< T> clazz)
 * 0.
 
 <!--第二十行-->
-##anyString
+## anyString
 ```java
 	public static String anyString()
 ```
@@ -527,7 +527,7 @@ public static < T> Set < T> anySetOf(Class< T> clazz)
 * 空String ("").
 
 <!--第二十一行-->
-##anyVararg
+## anyVararg
 ```java
 	public static < T> T anyVararg()
 ```
@@ -560,7 +560,7 @@ public static < T> Set < T> anySetOf(Class< T> clazz)
 * null.
 
 <!--第二十二行-->
-##argThat
+## argThat
 ```java
 public static < T> T argThat(ArgumentMatcher < T> matcher)
 ```
@@ -582,7 +582,7 @@ public static < T> T argThat(ArgumentMatcher < T> matcher)
 * null.
 
 <!--第二十三行-->
-##booleanThat
+## booleanThat
 ```java
 public static boolean booleanThat(ArgumentMatcher < Boolean> matcher)
 ```
@@ -599,7 +599,7 @@ public static boolean booleanThat(ArgumentMatcher < Boolean> matcher)
 * false.
 
 <!--第二十四行-->
-##byteThat
+## byteThat
 ```java
 public static byte byteThat(ArgumentMatcher < Byte> matcher)
 ```
@@ -617,7 +617,7 @@ public static byte byteThat(ArgumentMatcher < Byte> matcher)
 * 0.
 
 <!--第二十五行-->
-##charThat
+## charThat
 ```java
 public static char charThat(ArgumentMatcher < Character> matcher)
 ```

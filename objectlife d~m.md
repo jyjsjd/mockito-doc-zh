@@ -1,4 +1,4 @@
-##description函数
+## description函数
 
 `public static VerificationMod description(String description)`
 
@@ -24,7 +24,7 @@ verify(mock, description("This will print on failure")).someMethod("some arg");
 
 ---
 
-##doAnswer函数
+## doAnswer函数
 
 `public static Stubber doAnswer(Answer answer)`
 
@@ -55,7 +55,7 @@ doAnswer(new Answer() {
 
 ---
 
-##doCallRealMethod函数
+## doCallRealMethod函数
 
 `public static Stubber doCallRealMethod()`
 
@@ -91,7 +91,7 @@ Foo mock = mock(Foo.class);
 
 ---
 
-##doNothing函数
+## doNothing函数
 
 `public static Stubber doNothing()`
 
@@ -142,7 +142,7 @@ stubber - 测试方法的测试桩
 
 
 
-##doReturn函数
+## doReturn函数
 
 `public static Stubber doReturn(Object toBeReturned)`
 
@@ -199,7 +199,7 @@ stubber - 测试方法的测试桩
 
 ---
 
-##doThrow函数
+## doThrow函数
 
 `public static Stubber doThrow(Class<? extends Throwable> toBeThrown)`
 
@@ -227,7 +227,7 @@ doThrow(RuntimeException.class).when(mock).someVoidMethod();
 
 ---
 
-##doThrow函数
+## doThrow函数
 
 `public static Stubber doThrow(Throwable toBeThrown)`
 
@@ -255,7 +255,7 @@ doThrow(RuntimeException.class).when(mock).someVoidMethod();
 
 ---
 
-##ignoreStubs函数
+## ignoreStubs函数
 
 `public static Object[] ignoreStubs(Object... mocks)`
  
@@ -343,7 +343,7 @@ List list = mock(List.class);
 ---
 
 
-##inOrder函数
+## inOrder函数
 
 `public static InOrder inOrder(Object... mocks)`
 
@@ -375,7 +375,7 @@ in order中被用于验证的InOrder对象
 
 ---
 
-##mock函数
+## mock函数
 
 `public static <T> T mock(Class <T> classToMock)`
 
@@ -392,7 +392,7 @@ mock对象
 
 ---
 
-##mock函数
+## mock函数
 
 `public static <T> T mock(Class <T> classToMock, Answer defaultAnswer)`
 
@@ -422,7 +422,7 @@ mock对象
 
 ---
 
-##mock函数
+## mock函数
 
 `public static <T> T mock(Class <T> classToMock, MockSettings mockSettings)`
  
@@ -456,7 +456,7 @@ Listener mock = mock(Listener.class, withSettings()
 
 ---
 
-##mock
+## mock
 
 @Deprecated
 
@@ -493,7 +493,7 @@ Foo mockTwo = mock(Foo.class, new YourOwnReturnValues());
 
 * mock对象
 
-##mock
+## mock
 
 `public static <T> T mock(Class <T> classToMock, String name)`
 
